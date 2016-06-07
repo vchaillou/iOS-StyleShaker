@@ -9,6 +9,10 @@
 import UIKit
 
 class MoodTableViewController: UITableViewController {
+    
+    
+    //var data =["TRAVAIL","SOIREE","WEEKEND","CHILL"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,23 +33,23 @@ class MoodTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 4
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    
+      override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MoodElementIdentifier", forIndexPath: indexPath)
 
-        // Configure the cell...
-
+        //cell.textLabel?.text = data[indexPath.row]
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
