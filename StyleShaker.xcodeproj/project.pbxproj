@@ -12,6 +12,7 @@
 		EC46232C1D0724170095F6E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC46232A1D0724170095F6E5 /* Main.storyboard */; };
 		EC46232E1D0724170095F6E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC46232D1D0724170095F6E5 /* Assets.xcassets */; };
 		EC4623311D0724170095F6E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC46232F1D0724170095F6E5 /* LaunchScreen.storyboard */; };
+		EC8D47841D0738A900696965 /* GoogleShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D47831D0738A900696965 /* GoogleShoppingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EC46232D1D0724170095F6E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC4623301D0724170095F6E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC4623321D0724170095F6E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC8D47831D0738A900696965 /* GoogleShoppingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleShoppingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				EC46232D1D0724170095F6E5 /* Assets.xcassets */,
 				EC46232F1D0724170095F6E5 /* LaunchScreen.storyboard */,
 				EC4623321D0724170095F6E5 /* Info.plist */,
+				EC8D47831D0738A900696965 /* GoogleShoppingTableViewController.swift */,
 			);
 			path = StyleShaker;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4623291D0724170095F6E5 /* ViewController.swift in Sources */,
+				EC8D47841D0738A900696965 /* GoogleShoppingTableViewController.swift in Sources */,
 				EC4623271D0724170095F6E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +288,7 @@
 				EC4623371D0724170095F6E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
