@@ -8,6 +8,12 @@
 
 import UIKit
 
+let CELL_ELEMENT_IDENTIFIER="MeElementIdentifier"
+let CELL_TITLE_IDENTIFIER="MeTitleElementIdentifier"
+
+let VIEW_TITLE="Me"
+let VIEW_CORPUS="Décrivez votre propre couleur de cheuveux, votre couleur de peau et votre sexe"
+
 class MeTableViewController: UIViewController, UITableViewDataSource{
     
     // Tableaux contenant les différents paramètres de Me
@@ -37,21 +43,30 @@ class MeTableViewController: UIViewController, UITableViewDataSource{
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return section == 1 ? 3 : 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MeElementIdentifier", forIndexPath: indexPath) as! MeTableViewCell
+        if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCellWithIdentifier(CELL_ELEMENT_IDENTIFIER, forIndexPath: indexPath) as! MeTableViewCell
 
-        cell.setLeftButtonText(leftButtonText[indexPath.row])
-        cell.setRightButtonText(rightButtonText[indexPath.row])
-        cell.setCellTitleText(cellTitleText[indexPath.row])
-        return cell
+            cell.setLeftButtonText(leftButtonText[indexPath.row])
+            cell.setRightButtonText(rightButtonText[indexPath.row])
+            cell.setCellTitleText(cellTitleText[indexPath.row])
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCellWithIdentifier(CELL_TITLE_IDENTIFIER, forIndexPath: indexPath) as! MeTitleTableViewCell
+            
+            cell.setCellTitleText(VIEW_TITLE)
+            cell.setCellCorpusText(VIEW_CORPUS)
+            return cell
+        }
     }
 
     @IBAction func onValidate(sender: AnyObject) {
