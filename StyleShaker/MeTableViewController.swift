@@ -14,12 +14,15 @@ let CELL_TITLE_IDENTIFIER="MeTitleElementIdentifier"
 let VIEW_TITLE="Me"
 let VIEW_CORPUS="Décrivez votre propre couleur de cheuveux, votre couleur de peau et votre sexe"
 
+let SEGUE_ME_TO_MOOD="MeToMood"
+
 class MeTableViewController: UIViewController, UITableViewDataSource{
     
     // Tableaux contenant les différents paramètres de Me
-    var leftButtonText:Array<String> = ["Clairs", "Claire", "Male"]
-    var rightButtonText:Array<String> = ["Foncés", "Foncée", "Femelle"]
-    var cellTitleText:Array<String> = ["Cheuveux", "Peau", "Sexe"]
+    var cellData:Array<UserPreference> = [
+            UserPreference(sTitle: "Cheuveux", sLeftValue: "Clairs", sRightValue: "Foncés", sPersistenceTag: "USER_DATA_PREFERENCE_HAIR"),
+            UserPreference(sTitle: "Peau", sLeftValue: "Claire", sRightValue: "Foncée", sPersistenceTag: "USER_DATA_PREFERENCE_SKIN"),
+            UserPreference(sTitle: "Sexe", sLeftValue: "Male", sRightValue: "Femelle", sPersistenceTag: "USER_DATA_PREFERENCE_GENDER")]
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -42,22 +45,19 @@ class MeTableViewController: UIViewController, UITableViewDataSource{
     // MARK: - Table view data source
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 2 // 1 => Description, 2 => cellules de choix
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return section == 1 ? 3 : 1
+        return section == 1 ? cellData.count : 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier(CELL_ELEMENT_IDENTIFIER, forIndexPath: indexPath) as! MeTableViewCell
 
-            cell.setLeftButtonText(leftButtonText[indexPath.row])
-            cell.setRightButtonText(rightButtonText[indexPath.row])
-            cell.setCellTitleText(cellTitleText[indexPath.row])
+            cell.setData(cellData[indexPath.row])
             return cell
         }
         else {
@@ -68,8 +68,19 @@ class MeTableViewController: UIViewController, UITableViewDataSource{
             return cell
         }
     }
-
-    @IBAction func onValidate(sender: AnyObject) {
-        // TODO => passer à la vue suivante
+    @IBAction func onValidate(sender: UIBarButtonItem) {
+        print("fjdkfgdkjg")
+        self.performSegueWithIdentifier(SEGUE_ME_TO_MOOD, sender: self);
+    }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller: MoodTableViewController = segue.destinationViewController as! MoodTableViewController;
+        //controller.preferences
+        
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
 }

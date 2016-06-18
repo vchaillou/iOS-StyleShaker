@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EF5-wO-BSq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EF5-wO-BSq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -18,15 +18,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pbf-Zs-eUa">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppx-Xm-HEe">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="b88-pE-6U7"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="k9t-hc-X0q"/>
+                                    <barButtonItem style="plain" id="gvf-Rf-ebe">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gGc-pE-VT1">
+                                            <rect key="frame" x="276" y="7" width="47" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Valider"/>
+                                        </button>
+                                        <connections>
+                                            <action selector="onValidate:" destination="Mfy-z3-0RA" id="gGL-e1-Ux1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="u86-d2-7bb"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="100" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="pbf-Zs-eUa">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeElementIdentifier" rowHeight="70" id="K6q-V1-Eoa" customClass="MeTableViewCell" customModule="StyleShaker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeElementIdentifier" id="K6q-V1-Eoa" customClass="MeTableViewCell" customModule="StyleShaker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K6q-V1-Eoa" id="41d-q8-bFM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFF-We-2hU">
@@ -59,7 +79,7 @@
                                                         <constraint firstAttribute="width" constant="200" id="rlC-3Y-9FF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -72,7 +92,7 @@
                                                 <constraint firstItem="IPV-r7-gpj" firstAttribute="top" secondItem="41d-q8-bFM" secondAttribute="topMargin" constant="21" id="foc-1P-hIy"/>
                                                 <constraint firstItem="fDm-nz-Pve" firstAttribute="top" secondItem="41d-q8-bFM" secondAttribute="topMargin" constant="21" id="hnI-2v-Bgb"/>
                                                 <constraint firstItem="AFF-We-2hU" firstAttribute="centerX" secondItem="41d-q8-bFM" secondAttribute="centerX" id="mfa-nc-dN8"/>
-                                                <constraint firstItem="AFF-We-2hU" firstAttribute="centerY" secondItem="41d-q8-bFM" secondAttribute="centerY" constant="10" id="r4r-SJ-4KJ"/>
+                                                <constraint firstItem="AFF-We-2hU" firstAttribute="centerY" secondItem="41d-q8-bFM" secondAttribute="centerY" constant="-5" id="r4r-SJ-4KJ"/>
                                                 <constraint firstItem="fch-8J-3cT" firstAttribute="centerX" secondItem="41d-q8-bFM" secondAttribute="centerX" id="yDU-2B-Sec"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -83,11 +103,11 @@
                                             <outlet property="rightButton" destination="fDm-nz-Pve" id="K5L-uP-er4"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeTitleElementIdentifier" rowHeight="120" id="99H-Hi-dY9" customClass="MeTitleTableViewCell" customModule="StyleShaker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="162" width="600" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeTitleElementIdentifier" id="99H-Hi-dY9" customClass="MeTitleTableViewCell" customModule="StyleShaker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="165" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="99H-Hi-dY9" id="AZE-p8-rFl">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szr-wJ-8LM">
@@ -97,7 +117,7 @@
                                                         <constraint firstAttribute="width" constant="200" id="NXf-Dd-tXM"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Corpus" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzS-jj-cpv">
@@ -111,7 +131,7 @@
                                                 <constraint firstItem="WzS-jj-cpv" firstAttribute="leading" secondItem="AZE-p8-rFl" secondAttribute="leadingMargin" id="4Hx-WM-HTW"/>
                                                 <constraint firstItem="WzS-jj-cpv" firstAttribute="trailing" secondItem="AZE-p8-rFl" secondAttribute="trailingMargin" id="Opg-kb-aXH"/>
                                                 <constraint firstItem="Szr-wJ-8LM" firstAttribute="centerX" secondItem="AZE-p8-rFl" secondAttribute="centerX" id="gIu-eN-oes"/>
-                                                <constraint firstItem="WzS-jj-cpv" firstAttribute="bottom" secondItem="AZE-p8-rFl" secondAttribute="bottomMargin" id="mkS-aR-KUh"/>
+                                                <constraint firstItem="WzS-jj-cpv" firstAttribute="bottom" secondItem="AZE-p8-rFl" secondAttribute="bottomMargin" constant="20" id="mkS-aR-KUh"/>
                                                 <constraint firstItem="WzS-jj-cpv" firstAttribute="top" secondItem="Szr-wJ-8LM" secondAttribute="bottom" constant="8" id="vb5-jk-a3r"/>
                                                 <constraint firstItem="Szr-wJ-8LM" firstAttribute="top" secondItem="AZE-p8-rFl" secondAttribute="topMargin" id="z0G-sN-Etg"/>
                                             </constraints>
@@ -123,27 +143,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppx-Xm-HEe">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="b88-pE-6U7"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="k9t-hc-X0q"/>
-                                    <barButtonItem style="plain" id="gvf-Rf-ebe">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gGc-pE-VT1">
-                                            <rect key="frame" x="276" y="7" width="47" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Valider"/>
-                                        </button>
-                                        <connections>
-                                            <action selector="onValidate:" destination="Mfy-z3-0RA" id="UTJ-G1-ETZ"/>
-                                            <segue destination="75Z-Vx-eTe" kind="show" id="jhs-0Y-eTP"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="u86-d2-7bb"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -159,11 +158,12 @@
                     <navigationItem key="navigationItem" title="Style Shaker" id="TgU-Al-TkS"/>
                     <connections>
                         <outlet property="tableView" destination="pbf-Zs-eUa" id="qpK-SC-Zti"/>
+                        <segue destination="75Z-Vx-eTe" kind="show" id="oMl-h1-1fU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVQ-1g-oow" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1237" y="523"/>
+            <point key="canvasLocation" x="1285" y="523"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="JOF-jP-lSM">
@@ -194,7 +194,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgZ-q6-nfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2607" y="523"/>
+            <point key="canvasLocation" x="2631" y="523"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="1hY-yI-ORL">
@@ -223,7 +223,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZ9-EZ-1mJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3564" y="300"/>
+            <point key="canvasLocation" x="3584" y="276"/>
         </scene>
         <!--test 5-->
         <scene sceneID="6zh-O7-Ly1">
@@ -335,7 +335,7 @@
         <!--Style Shaker-->
         <scene sceneID="KnZ-66-Raa">
             <objects>
-                <viewController id="75Z-Vx-eTe" customClass="MeTableViewController" customModule="StyleShaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="75Z-Vx-eTe" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jxX-4y-1i2"/>
                         <viewControllerLayoutGuide type="bottom" id="mVr-2c-lBO"/>
@@ -370,7 +370,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeElementIdentifier" rowHeight="70" id="Xod-6h-BrN" customClass="MeTableViewCell" customModule="StyleShaker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="70"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xod-6h-BrN" id="EfV-8y-ODe">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
@@ -406,7 +406,7 @@
                                                         <constraint firstAttribute="width" constant="200" id="VlM-rq-967"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -431,7 +431,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeTitleElementIdentifier" rowHeight="120" id="yPc-HA-weG" customClass="MeTitleTableViewCell" customModule="StyleShaker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="162" width="600" height="120"/>
+                                        <rect key="frame" x="0.0" y="98" width="600" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yPc-HA-weG" id="5F8-AK-3eZ">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
@@ -444,7 +444,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="tLN-6W-e42"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Corpus" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6r-Wq-34T">
@@ -489,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qF4-S0-5Gz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972" y="523"/>
+            <point key="canvasLocation" x="1961" y="523"/>
         </scene>
     </scenes>
 </document>

@@ -12,6 +12,7 @@ class MoodTableViewController: UITableViewController {
     
     
     //var data =["TRAVAIL","SOIREE","WEEKEND","CHILL"]
+    //internal var userPreferences:Array<UserPreference>
     
 
     override func viewDidLoad() {
