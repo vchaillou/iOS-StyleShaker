@@ -8,11 +8,25 @@
 
 import UIKit
 
-class MoodTableViewController: UITableViewController {
+let MOOD_CELL_ELEMENT_IDENTIFIER="MoodElementIdentifier"
+let MOOD_CELL_TITLE_IDENTIFIER="MoodTitleElementIdentifier"
+
+let MOOD_VIEW_TITLE="Mood"
+let MOOD_VIEW_CORPUS="Décrivez votre mood"
+
+let SEGUE_MOOD_TO_NEXT="MoodToNext"
+
+class MoodTableViewController: UIViewController,UITableViewDataSource {
     
     
-    //var data =["TRAVAIL","SOIREE","WEEKEND","CHILL"]
-    //internal var userPreferences:Array<UserPreference>
+    // Tableaux contenant les différents paramètres de Mood
+    var cellData:Array<UserPreference> = [
+        UserPreference(sTitle: "Travail", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_WORK"),
+        UserPreference(sTitle: "Soiree", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_NIGHT"),
+        UserPreference(sTitle: "Weekend", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_WEEKEND"),
+        UserPreference(sTitle: "Chill", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_CHILL")]
+    
+    @IBOutlet weak var tableView: UITableView!
     
 
     override func viewDidLoad() {
@@ -23,6 +37,7 @@ class MoodTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,71 +47,31 @@ class MoodTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4
+        return 2
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
-    }
-
-    
-    
-    
-      override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MoodElementIdentifier", forIndexPath: indexPath)
-
-        //cell.textLabel?.text = data[indexPath.row]
-        
-        return cell
+        return section == 1 ? cellData.count : 1
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCellWithIdentifier(MOOD_CELL_ELEMENT_IDENTIFIER, forIndexPath: indexPath) as! MoodTableViewCell
+            
+            cell.setData(cellData[indexPath.row])
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCellWithIdentifier(MOOD_CELL_TITLE_IDENTIFIER, forIndexPath: indexPath) as! TitleTableViewCell
+            
+            cell.setCellTitleText(MOOD_VIEW_TITLE)
+            cell.setCellCorpusText(MOOD_VIEW_CORPUS)
+            return cell
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

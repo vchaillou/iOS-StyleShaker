@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeTitleTableViewCell: UITableViewCell {
+class TitleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellCorpus: UITextView!

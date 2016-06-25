@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EF5-wO-BSq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EF5-wO-BSq">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -25,28 +25,28 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="k9t-hc-X0q"/>
-                                    <barButtonItem style="plain" id="gvf-Rf-ebe">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gGc-pE-VT1">
+                                    <barButtonItem style="plain" id="6Io-lI-A3t">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dFW-gb-7ce">
                                             <rect key="frame" x="276" y="7" width="47" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Valider"/>
+                                            <connections>
+                                                <action selector="onValidate:" destination="Mfy-z3-0RA" eventType="touchUpInside" id="mgj-MQ-UC1"/>
+                                            </connections>
                                         </button>
-                                        <connections>
-                                            <action selector="onValidate:" destination="Mfy-z3-0RA" id="gGL-e1-Ux1"/>
-                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="u86-d2-7bb"/>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="100" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="pbf-Zs-eUa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="pbf-Zs-eUa">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeElementIdentifier" id="K6q-V1-Eoa" customClass="MeTableViewCell" customModule="StyleShaker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="65" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K6q-V1-Eoa" id="41d-q8-bFM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFF-We-2hU">
@@ -64,6 +64,15 @@
                                                         <action selector="onClick:" destination="K6q-V1-Eoa" eventType="touchUpInside" id="MsT-3l-J2A"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqH-9l-eQv">
+                                                    <rect key="frame" x="375" y="29" width="177" height="30"/>
+                                                    <state key="normal" title="RightButton">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="onClick:" destination="K6q-V1-Eoa" eventType="touchUpInside" id="xgu-b5-AcE"/>
+                                                    </connections>
+                                                </button>
                                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDm-nz-Pve">
                                                     <rect key="frame" x="375" y="29" width="177" height="30"/>
                                                     <state key="normal" title="RightButton">
@@ -76,6 +85,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-8J-3cT">
                                                     <rect key="frame" x="200" y="0.0" width="200" height="21"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="1XJ-UA-4nf"/>
                                                         <constraint firstAttribute="width" constant="200" id="rlC-3Y-9FF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -84,30 +94,35 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="fch-8J-3cT" firstAttribute="centerX" secondItem="41d-q8-bFM" secondAttribute="centerX" id="8Kk-Xa-8jG"/>
                                                 <constraint firstItem="AFF-We-2hU" firstAttribute="leading" secondItem="IPV-r7-gpj" secondAttribute="trailing" constant="50" id="BWY-zp-82c"/>
-                                                <constraint firstItem="fDm-nz-Pve" firstAttribute="top" secondItem="fch-8J-3cT" secondAttribute="bottom" constant="8" id="Ccb-TU-nkQ"/>
                                                 <constraint firstItem="IPV-r7-gpj" firstAttribute="leading" secondItem="41d-q8-bFM" secondAttribute="leadingMargin" constant="40" id="HH8-pS-gkU"/>
-                                                <constraint firstItem="fDm-nz-Pve" firstAttribute="trailing" secondItem="41d-q8-bFM" secondAttribute="trailingMargin" constant="-40" id="RMi-8c-xLE"/>
-                                                <constraint firstItem="fDm-nz-Pve" firstAttribute="leading" secondItem="AFF-We-2hU" secondAttribute="trailing" constant="50" id="VPJ-nH-5z3"/>
+                                                <constraint firstItem="dqH-9l-eQv" firstAttribute="top" secondItem="41d-q8-bFM" secondAttribute="topMargin" constant="21" id="M2g-4Y-Xq5"/>
                                                 <constraint firstItem="IPV-r7-gpj" firstAttribute="top" secondItem="41d-q8-bFM" secondAttribute="topMargin" constant="21" id="foc-1P-hIy"/>
-                                                <constraint firstItem="fDm-nz-Pve" firstAttribute="top" secondItem="41d-q8-bFM" secondAttribute="topMargin" constant="21" id="hnI-2v-Bgb"/>
+                                                <constraint firstItem="dqH-9l-eQv" firstAttribute="leading" secondItem="AFF-We-2hU" secondAttribute="trailing" constant="50" id="hpb-Zt-Lu1"/>
                                                 <constraint firstItem="AFF-We-2hU" firstAttribute="centerX" secondItem="41d-q8-bFM" secondAttribute="centerX" id="mfa-nc-dN8"/>
                                                 <constraint firstItem="AFF-We-2hU" firstAttribute="centerY" secondItem="41d-q8-bFM" secondAttribute="centerY" constant="-5" id="r4r-SJ-4KJ"/>
-                                                <constraint firstItem="fch-8J-3cT" firstAttribute="centerX" secondItem="41d-q8-bFM" secondAttribute="centerX" id="yDU-2B-Sec"/>
+                                                <constraint firstItem="dqH-9l-eQv" firstAttribute="top" secondItem="fch-8J-3cT" secondAttribute="bottom" constant="8" id="u1a-LO-2HV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dqH-9l-eQv" secondAttribute="trailing" constant="40" id="uga-RB-Lff"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="fDm-nz-Pve"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellSwitch" destination="AFF-We-2hU" id="mxF-4P-Uzr"/>
                                             <outlet property="cellTitle" destination="fch-8J-3cT" id="rUV-gd-1Jx"/>
                                             <outlet property="leftButton" destination="IPV-r7-gpj" id="0ld-h9-VJD"/>
-                                            <outlet property="rightButton" destination="fDm-nz-Pve" id="K5L-uP-er4"/>
+                                            <outlet property="rightButton" destination="dqH-9l-eQv" id="YRq-6A-X6k"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeTitleElementIdentifier" id="99H-Hi-dY9" customClass="MeTitleTableViewCell" customModule="StyleShaker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="165" width="600" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeTitleElementIdentifier" id="99H-Hi-dY9" customClass="TitleTableViewCell" customModule="StyleShaker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="99H-Hi-dY9" id="AZE-p8-rFl">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szr-wJ-8LM">
@@ -158,7 +173,7 @@
                     <navigationItem key="navigationItem" title="Style Shaker" id="TgU-Al-TkS"/>
                     <connections>
                         <outlet property="tableView" destination="pbf-Zs-eUa" id="qpK-SC-Zti"/>
-                        <segue destination="75Z-Vx-eTe" kind="show" id="oMl-h1-1fU"/>
+                        <segue destination="75Z-Vx-eTe" kind="show" identifier="MeToMood" id="oMl-h1-1fU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVQ-1g-oow" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -178,7 +193,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dXA-tq-jb1" id="gDU-BQ-Ims">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -209,7 +224,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k12-al-1HY" id="jGC-a1-ijq">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -238,7 +253,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jSV-s4-8Wr" id="5BS-mb-d2T">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="essai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxg-AM-S8n">
@@ -280,7 +295,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ppe-xg-BT7" id="mpB-1r-2kR">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -335,7 +350,7 @@
         <!--Style Shaker-->
         <scene sceneID="KnZ-66-Raa">
             <objects>
-                <viewController id="75Z-Vx-eTe" sceneMemberID="viewController">
+                <viewController id="75Z-Vx-eTe" customClass="MoodTableViewController" customModule="StyleShaker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jxX-4y-1i2"/>
                         <viewControllerLayoutGuide type="bottom" id="mVr-2c-lBO"/>
@@ -365,76 +380,50 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="MvI-Q5-vPr"/>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yre-So-evs">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yre-So-evs">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeElementIdentifier" rowHeight="70" id="Xod-6h-BrN" customClass="MeTableViewCell" customModule="StyleShaker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoodElementIdentifier" rowHeight="50" id="Xod-6h-BrN" customClass="MoodTableViewCell" customModule="StyleShaker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xod-6h-BrN" id="EfV-8y-ODe">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTN-e0-XDw">
-                                                    <rect key="frame" x="276" y="29" width="51" height="31"/>
-                                                    <connections>
-                                                        <action selector="onSwitch:" destination="Xod-6h-BrN" eventType="valueChanged" id="M6b-EE-sQ8"/>
-                                                    </connections>
-                                                </switch>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weT-FE-MFX">
-                                                    <rect key="frame" x="48" y="29" width="178" height="30"/>
-                                                    <state key="normal" title="LeftButton">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="onClick:" destination="Xod-6h-BrN" eventType="touchUpInside" id="ocx-ku-M6G"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7Q-gw-mzu">
-                                                    <rect key="frame" x="375" y="29" width="177" height="30"/>
-                                                    <state key="normal" title="RightButton">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="onClick:" destination="Xod-6h-BrN" eventType="touchUpInside" id="J24-Wz-QAi"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiE-Zm-NSz">
-                                                    <rect key="frame" x="200" y="0.0" width="200" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="VlM-rq-967"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiE-Zm-NSz">
+                                                    <rect key="frame" x="8" y="14" width="527" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTN-e0-XDw">
+                                                    <rect key="frame" x="543" y="9" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="onSwitch:" destination="Xod-6h-BrN" eventType="valueChanged" id="M6b-EE-sQ8"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="d7Q-gw-mzu" firstAttribute="top" secondItem="kiE-Zm-NSz" secondAttribute="bottom" constant="8" id="1or-vG-oic"/>
-                                                <constraint firstItem="YTN-e0-XDw" firstAttribute="leading" secondItem="weT-FE-MFX" secondAttribute="trailing" constant="50" id="2RL-tF-qUd"/>
-                                                <constraint firstItem="d7Q-gw-mzu" firstAttribute="trailing" secondItem="EfV-8y-ODe" secondAttribute="trailingMargin" constant="-40" id="Hp3-2X-seQ"/>
-                                                <constraint firstItem="d7Q-gw-mzu" firstAttribute="top" secondItem="EfV-8y-ODe" secondAttribute="topMargin" constant="21" id="Mrk-to-5Vz"/>
-                                                <constraint firstItem="weT-FE-MFX" firstAttribute="leading" secondItem="EfV-8y-ODe" secondAttribute="leadingMargin" constant="40" id="jGl-OL-cLU"/>
-                                                <constraint firstItem="weT-FE-MFX" firstAttribute="top" secondItem="EfV-8y-ODe" secondAttribute="topMargin" constant="21" id="nXI-Xx-U1G"/>
-                                                <constraint firstItem="d7Q-gw-mzu" firstAttribute="leading" secondItem="YTN-e0-XDw" secondAttribute="trailing" constant="50" id="naS-Ao-lhE"/>
-                                                <constraint firstItem="YTN-e0-XDw" firstAttribute="centerX" secondItem="EfV-8y-ODe" secondAttribute="centerX" id="pjb-Tn-v9t"/>
-                                                <constraint firstItem="kiE-Zm-NSz" firstAttribute="centerX" secondItem="EfV-8y-ODe" secondAttribute="centerX" id="pwk-KW-ZFu"/>
-                                                <constraint firstItem="YTN-e0-XDw" firstAttribute="centerY" secondItem="EfV-8y-ODe" secondAttribute="centerY" constant="10" id="xjn-b6-Pg5"/>
+                                                <constraint firstItem="kiE-Zm-NSz" firstAttribute="leading" secondItem="EfV-8y-ODe" secondAttribute="leadingMargin" id="B1S-x8-gKt"/>
+                                                <constraint firstItem="YTN-e0-XDw" firstAttribute="leading" secondItem="kiE-Zm-NSz" secondAttribute="trailing" constant="8" id="a23-sD-qbt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="YTN-e0-XDw" secondAttribute="bottom" constant="1.5" id="kFr-1z-3bl"/>
+                                                <constraint firstItem="kiE-Zm-NSz" firstAttribute="top" secondItem="EfV-8y-ODe" secondAttribute="topMargin" constant="6" id="ncv-cV-S0G"/>
+                                                <constraint firstItem="YTN-e0-XDw" firstAttribute="trailing" secondItem="EfV-8y-ODe" secondAttribute="trailingMargin" id="qwT-2h-hlh"/>
+                                                <constraint firstItem="YTN-e0-XDw" firstAttribute="top" secondItem="EfV-8y-ODe" secondAttribute="topMargin" constant="1" id="uV1-Hq-sLr"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kiE-Zm-NSz" secondAttribute="bottom" constant="6.5" id="yG8-LI-TtV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellSwitch" destination="YTN-e0-XDw" id="u8v-bT-Iqr"/>
                                             <outlet property="cellTitle" destination="kiE-Zm-NSz" id="YPm-DC-LdW"/>
-                                            <outlet property="leftButton" destination="weT-FE-MFX" id="jWh-SA-ctw"/>
-                                            <outlet property="rightButton" destination="d7Q-gw-mzu" id="jJk-cm-tXB"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeTitleElementIdentifier" rowHeight="120" id="yPc-HA-weG" customClass="MeTitleTableViewCell" customModule="StyleShaker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="98" width="600" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoodTitleElementIdentifier" rowHeight="120" id="yPc-HA-weG" customClass="TitleTableViewCell" customModule="StyleShaker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="78" width="600" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yPc-HA-weG" id="5F8-AK-3eZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYq-zk-TJA">

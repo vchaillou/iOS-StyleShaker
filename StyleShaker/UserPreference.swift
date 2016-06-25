@@ -32,6 +32,8 @@ class UserPreference {
         NSUserDefaults.standardUserDefaults().registerDefaults([persistenceTagEnabled:true, persistenceTagRightSelected:false])
         enabled = NSUserDefaults.standardUserDefaults().boolForKey(persistenceTagEnabled)
         rightSelected = NSUserDefaults.standardUserDefaults().boolForKey(persistenceTagRightSelected)
+        
+        DataPersistence.getInstance().addUserPreference(self)
     }
     
     internal func setEnabled(enable:Bool) {

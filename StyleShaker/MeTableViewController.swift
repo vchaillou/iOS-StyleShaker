@@ -8,11 +8,11 @@
 
 import UIKit
 
-let CELL_ELEMENT_IDENTIFIER="MeElementIdentifier"
-let CELL_TITLE_IDENTIFIER="MeTitleElementIdentifier"
+let ME_CELL_ELEMENT_IDENTIFIER="MeElementIdentifier"
+let ME_CELL_TITLE_IDENTIFIER="MeTitleElementIdentifier"
 
-let VIEW_TITLE="Me"
-let VIEW_CORPUS="Décrivez votre propre couleur de cheuveux, votre couleur de peau et votre sexe"
+let ME_VIEW_TITLE="Me"
+let ME_VIEW_CORPUS="Décrivez votre propre couleur de cheuveux, votre couleur de peau et votre sexe"
 
 let SEGUE_ME_TO_MOOD="MeToMood"
 
@@ -55,28 +55,28 @@ class MeTableViewController: UIViewController, UITableViewDataSource{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCellWithIdentifier(CELL_ELEMENT_IDENTIFIER, forIndexPath: indexPath) as! MeTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(ME_CELL_ELEMENT_IDENTIFIER, forIndexPath: indexPath) as! MeTableViewCell
 
             cell.setData(cellData[indexPath.row])
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCellWithIdentifier(CELL_TITLE_IDENTIFIER, forIndexPath: indexPath) as! MeTitleTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(ME_CELL_TITLE_IDENTIFIER, forIndexPath: indexPath) as! TitleTableViewCell
             
-            cell.setCellTitleText(VIEW_TITLE)
-            cell.setCellCorpusText(VIEW_CORPUS)
+            cell.setCellTitleText(ME_VIEW_TITLE)
+            cell.setCellCorpusText(ME_VIEW_CORPUS)
             return cell
         }
     }
-    @IBAction func onValidate(sender: UIBarButtonItem) {
-        print("fjdkfgdkjg")
+    
+    @IBAction func onValidate(sender: UIButton) {
         self.performSegueWithIdentifier(SEGUE_ME_TO_MOOD, sender: self);
     }
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller: MoodTableViewController = segue.destinationViewController as! MoodTableViewController;
         //controller.preferences
         
