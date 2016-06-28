@@ -16,7 +16,7 @@ let ME_VIEW_CORPUS="Décrivez votre propre couleur de cheuveux, votre couleur de
 
 let SEGUE_ME_TO_MOOD="MeToMood"
 
-class MeTableViewController: UIViewController, UITableViewDataSource{
+class MeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Tableaux contenant les différents paramètres de Me
     var cellData:Array<UserPreference> = [
@@ -35,6 +35,7 @@ class MeTableViewController: UIViewController, UITableViewDataSource{
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,6 +68,10 @@ class MeTableViewController: UIViewController, UITableViewDataSource{
             cell.setCellCorpusText(ME_VIEW_CORPUS)
             return cell
         }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return indexPath.section == 1 ? 80 : 100
     }
     
     @IBAction func onValidate(sender: UIButton) {

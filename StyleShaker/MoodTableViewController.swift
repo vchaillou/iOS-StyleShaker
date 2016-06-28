@@ -16,7 +16,7 @@ let MOOD_VIEW_CORPUS="Décrivez votre mood"
 
 let SEGUE_MOOD_TO_NEXT="MoodToNext"
 
-class MoodTableViewController: UIViewController,UITableViewDataSource {
+class MoodTableViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     
     // Tableaux contenant les différents paramètres de Mood
@@ -38,6 +38,7 @@ class MoodTableViewController: UIViewController,UITableViewDataSource {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +73,10 @@ class MoodTableViewController: UIViewController,UITableViewDataSource {
             cell.setCellCorpusText(MOOD_VIEW_CORPUS)
             return cell
         }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return indexPath.section == 1 ? 50 : 100
     }
 
 }
