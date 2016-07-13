@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A777D4C61D22CB13004F5C3C /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777D4C51D22CB13004F5C3C /* ProductsViewController.swift */; };
 		A7A76DF51D072DB6008048E6 /* MoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A76DF41D072DB6008048E6 /* MoodTableViewController.swift */; };
-		EC32CD331D08254D00DA06EF /* MeTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32CD321D08254D00DA06EF /* MeTitleTableViewCell.swift */; };
+		A7B6FC421D1EAA18003E48BC /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B6FC411D1EAA18003E48BC /* MoodTableViewCell.swift */; };
+		A7B6FC441D1EB749003E48BC /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B6FC431D1EB749003E48BC /* DataPersistence.swift */; };
+		A7B6FC461D1EBFFE003E48BC /* StyleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B6FC451D1EBFFE003E48BC /* StyleCollectionViewController.swift */; };
+		A7B6FC481D1EC11B003E48BC /* ParseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B6FC471D1EC11B003E48BC /* ParseUtil.swift */; };
 		EC33B6931D1565F900874706 /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC33B6921D1565F900874706 /* UserPreference.swift */; };
 		EC4623271D0724170095F6E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4623261D0724170095F6E5 /* AppDelegate.swift */; };
 		EC4623291D0724170095F6E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4623281D0724170095F6E5 /* ViewController.swift */; };
@@ -16,13 +20,19 @@
 		EC46232E1D0724170095F6E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC46232D1D0724170095F6E5 /* Assets.xcassets */; };
 		EC4623311D0724170095F6E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC46232F1D0724170095F6E5 /* LaunchScreen.storyboard */; };
 		EC4623391D072D970095F6E5 /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4623381D072D970095F6E5 /* MeTableViewController.swift */; };
+		EC6E5C4E1D36568B00B82C8F /* StyleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E5C4D1D36568B00B82C8F /* StyleCollectionViewCell.swift */; };
 		EC8087BE1D080A7700E6B2DB /* MeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8087BD1D080A7700E6B2DB /* MeTableViewCell.swift */; };
 		EC8D47841D0738A900696965 /* GoogleShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D47831D0738A900696965 /* GoogleShoppingTableViewController.swift */; };
+		ECED38E41D36A8F20076B75A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED38E31D36A8F20076B75A /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A777D4C51D22CB13004F5C3C /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		A7A76DF41D072DB6008048E6 /* MoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodTableViewController.swift; sourceTree = "<group>"; };
-		EC32CD321D08254D00DA06EF /* MeTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTitleTableViewCell.swift; sourceTree = "<group>"; };
+		A7B6FC411D1EAA18003E48BC /* MoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
+		A7B6FC431D1EB749003E48BC /* DataPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
+		A7B6FC451D1EBFFE003E48BC /* StyleCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleCollectionViewController.swift; sourceTree = "<group>"; };
+		A7B6FC471D1EC11B003E48BC /* ParseUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUtil.swift; sourceTree = "<group>"; };
 		EC33B6921D1565F900874706 /* UserPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 		EC4623231D0724170095F6E5 /* StyleShaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleShaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4623261D0724170095F6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,8 +42,10 @@
 		EC4623301D0724170095F6E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC4623321D0724170095F6E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC4623381D072D970095F6E5 /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
+		EC6E5C4D1D36568B00B82C8F /* StyleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC8087BD1D080A7700E6B2DB /* MeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewCell.swift; sourceTree = "<group>"; };
 		EC8D47831D0738A900696965 /* GoogleShoppingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleShoppingTableViewController.swift; sourceTree = "<group>"; };
+		ECED38E31D36A8F20076B75A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A777D4BE1D22C9DE004F5C3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EC46231A1D0724170095F6E5 = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				EC4623261D0724170095F6E5 /* AppDelegate.swift */,
+				A777D4BE1D22C9DE004F5C3C /* Model */,
 				EC33B6921D1565F900874706 /* UserPreference.swift */,
 				EC4623281D0724170095F6E5 /* ViewController.swift */,
+				A7B6FC411D1EAA18003E48BC /* MoodTableViewCell.swift */,
 				EC46232A1D0724170095F6E5 /* Main.storyboard */,
+				A7B6FC451D1EBFFE003E48BC /* StyleCollectionViewController.swift */,
 				EC46232D1D0724170095F6E5 /* Assets.xcassets */,
 				EC46232F1D0724170095F6E5 /* LaunchScreen.storyboard */,
 				EC4623321D0724170095F6E5 /* Info.plist */,
@@ -77,7 +99,11 @@
 				EC4623381D072D970095F6E5 /* MeTableViewController.swift */,
 				EC8D47831D0738A900696965 /* GoogleShoppingTableViewController.swift */,
 				EC8087BD1D080A7700E6B2DB /* MeTableViewCell.swift */,
-				EC32CD321D08254D00DA06EF /* MeTitleTableViewCell.swift */,
+				A7B6FC471D1EC11B003E48BC /* ParseUtil.swift */,
+				EC6E5C4D1D36568B00B82C8F /* StyleCollectionViewCell.swift */,
+				A7B6FC431D1EB749003E48BC /* DataPersistence.swift */,
+				A777D4C51D22CB13004F5C3C /* ProductsViewController.swift */,
+				ECED38E31D36A8F20076B75A /* Product.swift */,
 			);
 			path = StyleShaker;
 			sourceTree = "<group>";
@@ -153,14 +179,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6E5C4E1D36568B00B82C8F /* StyleCollectionViewCell.swift in Sources */,
 				EC4623291D0724170095F6E5 /* ViewController.swift in Sources */,
 				EC8087BE1D080A7700E6B2DB /* MeTableViewCell.swift in Sources */,
-				EC32CD331D08254D00DA06EF /* MeTitleTableViewCell.swift in Sources */,
+				A777D4C61D22CB13004F5C3C /* ProductsViewController.swift in Sources */,
+				A7B6FC481D1EC11B003E48BC /* ParseUtil.swift in Sources */,
+				A7B6FC441D1EB749003E48BC /* DataPersistence.swift in Sources */,
+				A7B6FC421D1EAA18003E48BC /* MoodTableViewCell.swift in Sources */,
 				EC8D47841D0738A900696965 /* GoogleShoppingTableViewController.swift in Sources */,
 				EC4623271D0724170095F6E5 /* AppDelegate.swift in Sources */,
 				EC33B6931D1565F900874706 /* UserPreference.swift in Sources */,
 				A7A76DF51D072DB6008048E6 /* MoodTableViewController.swift in Sources */,
 				EC4623391D072D970095F6E5 /* MeTableViewController.swift in Sources */,
+				A7B6FC461D1EBFFE003E48BC /* StyleCollectionViewController.swift in Sources */,
+				ECED38E41D36A8F20076B75A /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

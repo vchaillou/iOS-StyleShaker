@@ -8,8 +8,8 @@
 
 import UIKit
 
-let APPEND_RIGHT_SELECTED:String = "_RIGHT_SELECTED"
-let APPEND_ENABLED:String = "_ENABLED"
+private let APPEND_RIGHT_SELECTED:String = "_RIGHT_SELECTED"
+private let APPEND_ENABLED:String = "_ENABLED"
 
 class UserPreference {
     internal var title:String
@@ -32,10 +32,16 @@ class UserPreference {
         NSUserDefaults.standardUserDefaults().registerDefaults([persistenceTagEnabled:true, persistenceTagRightSelected:false])
         enabled = NSUserDefaults.standardUserDefaults().boolForKey(persistenceTagEnabled)
         rightSelected = NSUserDefaults.standardUserDefaults().boolForKey(persistenceTagRightSelected)
+        
+        DataPersistence.getInstance().addUserPreference(self)
+    }
+    
+    deinit {
+        DataPersistence.getInstance().removeUserPreference(self)
     }
     
     internal func setEnabled(enable:Bool) {
-        enabled = !enabled
+        enabled = enable
         NSUserDefaults.standardUserDefaults().setBool(enabled, forKey: persistenceTagEnabled)
     }
     

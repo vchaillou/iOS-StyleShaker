@@ -21,7 +21,6 @@ class MeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        onClick(leftButton)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
