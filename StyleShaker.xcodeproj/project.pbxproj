@@ -25,7 +25,6 @@
 		EC4D7D021D39507500A1F078 /* ProductTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4D7D011D39507500A1F078 /* ProductTagCell.swift */; };
 		EC6E5C4E1D36568B00B82C8F /* StyleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E5C4D1D36568B00B82C8F /* StyleCollectionViewCell.swift */; };
 		EC8087BE1D080A7700E6B2DB /* MeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8087BD1D080A7700E6B2DB /* MeTableViewCell.swift */; };
-		EC8D47841D0738A900696965 /* GoogleShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D47831D0738A900696965 /* GoogleShoppingTableViewController.swift */; };
 		ECED38E41D36A8F20076B75A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED38E31D36A8F20076B75A /* Product.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +49,6 @@
 		EC4D7D011D39507500A1F078 /* ProductTagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTagCell.swift; sourceTree = "<group>"; };
 		EC6E5C4D1D36568B00B82C8F /* StyleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC8087BD1D080A7700E6B2DB /* MeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewCell.swift; sourceTree = "<group>"; };
-		EC8D47831D0738A900696965 /* GoogleShoppingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleShoppingTableViewController.swift; sourceTree = "<group>"; };
 		ECED38E31D36A8F20076B75A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +101,6 @@
 				EC4623321D0724170095F6E5 /* Info.plist */,
 				A7A76DF41D072DB6008048E6 /* MoodTableViewController.swift */,
 				EC4623381D072D970095F6E5 /* MeTableViewController.swift */,
-				EC8D47831D0738A900696965 /* GoogleShoppingTableViewController.swift */,
 				EC8087BD1D080A7700E6B2DB /* MeTableViewCell.swift */,
 				A7B6FC471D1EC11B003E48BC /* ParseUtil.swift */,
 				EC6E5C4D1D36568B00B82C8F /* StyleCollectionViewCell.swift */,
@@ -196,7 +193,6 @@
 				EC21BB281D3956610004E528 /* GoogleShoppingViewController.swift in Sources */,
 				A7B6FC441D1EB749003E48BC /* Preferences.swift in Sources */,
 				A7B6FC421D1EAA18003E48BC /* MoodTableViewCell.swift in Sources */,
-				EC8D47841D0738A900696965 /* GoogleShoppingTableViewController.swift in Sources */,
 				EC4D7D021D39507500A1F078 /* ProductTagCell.swift in Sources */,
 				EC4623271D0724170095F6E5 /* AppDelegate.swift in Sources */,
 				EC4D7D001D39416800A1F078 /* DetailProductViewController.swift in Sources */,

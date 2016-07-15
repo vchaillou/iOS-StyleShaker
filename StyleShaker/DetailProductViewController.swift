@@ -10,7 +10,7 @@ import UIKit
 
 
 private let DETAIL_CELL_ELEMENT_IDENTIFIER = "CollectionCell"
-
+private let SEGUE_DETAIL_TO_SHOPPING="DetailToShopping"
 
 class DetailProductViewController: UIViewController,UICollectionViewDataSource  {
 
@@ -35,7 +35,23 @@ class DetailProductViewController: UIViewController,UICollectionViewDataSource  
         descriptionProduct.text = product!.descriptionProduct
         tagProduct.dataSource = self
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
         
+        if (segue.identifier == SEGUE_DETAIL_TO_SHOPPING) {
+            
+            let controller: GoogleShoppingViewController = segue.destinationViewController as! GoogleShoppingViewController
+             controller.champs = product?.title
+            
+            
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         let url = NSURL(string : product!.urlImage);
         
         let data = NSData(contentsOfURL: url!)
@@ -43,7 +59,6 @@ class DetailProductViewController: UIViewController,UICollectionViewDataSource  
         if data != nil {
             imgProduct.image = UIImage(data:data!)
         }
-        
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
