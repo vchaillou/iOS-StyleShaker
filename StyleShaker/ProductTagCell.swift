@@ -6,4 +6,18 @@
 //  Copyright © 2016 ESGI. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+class ProductTagCell: UICollectionViewCell  {
+
+    
+    @IBOutlet weak var cellTagText: UILabel!
+    
+    
+    internal func setCellTag(text:String) {
+        cellTagText.text = text
+    }
+
+
+}

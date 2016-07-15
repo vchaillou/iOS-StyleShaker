@@ -12,6 +12,7 @@ private let APPEND_RIGHT_SELECTED:String = "_RIGHT_SELECTED"
 private let APPEND_ENABLED:String = "_ENABLED"
 
 class UserPreference {
+    internal var key:String
     internal var title:String
     internal var leftValue:String
     internal var rightValue:String
@@ -20,7 +21,8 @@ class UserPreference {
     private var enabled:Bool
     private var rightSelected:Bool
     
-    init(sTitle:String, sLeftValue:String, sRightValue:String, sPersistenceTag:String) {
+    init(sKey:String, sTitle:String, sLeftValue:String, sRightValue:String, sPersistenceTag:String) {
+        key = sKey
         title = sTitle
         leftValue = sLeftValue
         rightValue = sRightValue
@@ -32,12 +34,6 @@ class UserPreference {
         NSUserDefaults.standardUserDefaults().registerDefaults([persistenceTagEnabled:true, persistenceTagRightSelected:false])
         enabled = NSUserDefaults.standardUserDefaults().boolForKey(persistenceTagEnabled)
         rightSelected = NSUserDefaults.standardUserDefaults().boolForKey(persistenceTagRightSelected)
-        
-        DataPersistence.getInstance().addUserPreference(self)
-    }
-    
-    deinit {
-        DataPersistence.getInstance().removeUserPreference(self)
     }
     
     internal func setEnabled(enable:Bool) {

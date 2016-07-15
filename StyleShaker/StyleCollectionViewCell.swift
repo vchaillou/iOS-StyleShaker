@@ -13,6 +13,8 @@ class StyleCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
     
+    internal var product:Product?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

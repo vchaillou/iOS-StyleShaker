@@ -12,27 +12,19 @@ import UIKit
 class Product:NSObject {
     
     
-    var title : String
-    var urlImage : String
-    var longTitle : String
-    var tag : Array<String>
-    var descriptionProduct : String
+    internal var title: String
+    internal var urlImage: String
+    internal var tags: Array<String>
+    internal var descriptionProduct: String
     
     
-    override init() {
-        super.init()
-    }
-    
-    
-    
-    convenience init(title: String,urlImage : String, longTitle : String, tag : Array<String>, descriptionProduct : String) {
+    init(title: String, urlImage: String, tags: Array<String>, descriptionProduct: String) {
         self.title = title
         self.urlImage = urlImage
-        self.longTitle = longTitle
-        self.tag = tag
+        self.tags = tags
         self.descriptionProduct = descriptionProduct
-        
     }
+    
     
     
     

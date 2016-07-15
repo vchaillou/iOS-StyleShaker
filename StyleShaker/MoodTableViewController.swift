@@ -14,14 +14,6 @@ private let SEGUE_MOOD_TO_STYLE="MoodToStyle"
 
 class MoodTableViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
-    
-    // Tableaux contenant les différents paramètres de Mood
-    var cellData:Array<UserPreference> = [
-        UserPreference(sTitle: "Travail", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_WORK"),
-        UserPreference(sTitle: "Soiree", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_NIGHT"),
-        UserPreference(sTitle: "Weekend", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_WEEKEND"),
-        UserPreference(sTitle: "Chill", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_CHILL")]
-    
     @IBOutlet weak var tableView: UITableView!
     
 
@@ -51,14 +43,14 @@ class MoodTableViewController: UIViewController,UITableViewDataSource, UITableVi
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cellData.count
+        return MOOD_PREFERENCES.count
     }
     
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(MOOD_CELL_ELEMENT_IDENTIFIER, forIndexPath: indexPath) as! MoodTableViewCell
             
-        cell.setData(cellData[indexPath.row])
+        cell.setData(MOOD_PREFERENCES[indexPath.row])
         return cell
     }
 

@@ -6,4 +6,13 @@
 //  Copyright © 2016 ESGI. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+
+class GoogleShoppingViewController: UIViewController  {
+
+
+        
+    
+}

@@ -13,13 +13,6 @@ private let ME_CELL_ELEMENT_IDENTIFIER="MeElementIdentifier"
 private let SEGUE_ME_TO_MOOD="MeToMood"
 
 class MeTableViewController: UIViewController, UITableViewDataSource {
-    
-    // Tableaux contenant les différents paramètres de Me
-    var cellData:Array<UserPreference> = [
-            UserPreference(sTitle: "Cheuveux", sLeftValue: "Clairs", sRightValue: "Foncés", sPersistenceTag: "USER_DATA_PREFERENCE_HAIR"),
-            UserPreference(sTitle: "Peau", sLeftValue: "Claire", sRightValue: "Foncée", sPersistenceTag: "USER_DATA_PREFERENCE_SKIN"),
-            UserPreference(sTitle: "Sexe", sLeftValue: "Male", sRightValue: "Femelle", sPersistenceTag: "USER_DATA_PREFERENCE_GENDER"),
-            UserPreference(sTitle: "prout", sLeftValue: "fnhdjskf", sRightValue: "fhdjskf", sPersistenceTag: "USER_DATA_PREFERENCE_TEST")]
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -47,13 +40,13 @@ class MeTableViewController: UIViewController, UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cellData.count
+        return ME_PREFERENCES.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(ME_CELL_ELEMENT_IDENTIFIER, forIndexPath: indexPath) as! MeTableViewCell
 
-        cell.setData(cellData[indexPath.row])
+        cell.setData(ME_PREFERENCES[indexPath.row])
         return cell
     }
 }
