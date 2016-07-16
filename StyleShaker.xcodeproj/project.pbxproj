@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A777D4C61D22CB13004F5C3C /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A777D4C51D22CB13004F5C3C /* ProductsViewController.swift */; };
+		A7A46ADF1D3AA27A002CAEE4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A46ADE1D3AA27A002CAEE4 /* Network.swift */; };
 		A7A76DF51D072DB6008048E6 /* MoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A76DF41D072DB6008048E6 /* MoodTableViewController.swift */; };
 		A7B6FC421D1EAA18003E48BC /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B6FC411D1EAA18003E48BC /* MoodTableViewCell.swift */; };
 		A7B6FC441D1EB749003E48BC /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B6FC431D1EB749003E48BC /* Preferences.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		A777D4C51D22CB13004F5C3C /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		A7A46ADE1D3AA27A002CAEE4 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		A7A76DF41D072DB6008048E6 /* MoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodTableViewController.swift; sourceTree = "<group>"; };
 		A7B6FC411D1EAA18003E48BC /* MoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
 		A7B6FC431D1EB749003E48BC /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				EC4D7CFF1D39416800A1F078 /* DetailProductViewController.swift */,
 				EC4D7D011D39507500A1F078 /* ProductTagCell.swift */,
 				EC21BB271D3956610004E528 /* GoogleShoppingViewController.swift */,
+				A7A46ADE1D3AA27A002CAEE4 /* Network.swift */,
 			);
 			path = StyleShaker;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				A777D4C61D22CB13004F5C3C /* ProductsViewController.swift in Sources */,
 				A7B6FC481D1EC11B003E48BC /* ParseUtil.swift in Sources */,
 				EC21BB281D3956610004E528 /* GoogleShoppingViewController.swift in Sources */,
+				A7A46ADF1D3AA27A002CAEE4 /* Network.swift in Sources */,
 				A7B6FC441D1EB749003E48BC /* Preferences.swift in Sources */,
 				A7B6FC421D1EAA18003E48BC /* MoodTableViewCell.swift in Sources */,
 				EC4D7D021D39507500A1F078 /* ProductTagCell.swift in Sources */,
