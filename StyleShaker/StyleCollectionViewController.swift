@@ -20,6 +20,7 @@ class StyleCollectionViewController: UIViewController, UICollectionViewDataSourc
 
     @IBOutlet weak var collection: UICollectionView!
     internal var productList:Array<Product> = []
+    private var nbShake = 0;
     
     
     override func viewDidLoad() {
@@ -31,6 +32,7 @@ class StyleCollectionViewController: UIViewController, UICollectionViewDataSourc
         collection.dataSource = self
         
         ParseUtil.parseJson(STYLE_URL, viewController: self)
+        nbShake = 0;
         
     }
 
@@ -66,18 +68,28 @@ class StyleCollectionViewController: UIViewController, UICollectionViewDataSourc
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return productList.count
+        return productList.count < 10 ? productList.count : 10
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(STYLE_CELL_ELEMENT_IDENTIFIER, forIndexPath: indexPath) as! StyleCollectionViewCell
             
-        cell.setCellTitleText("Produit \(indexPath.row)")
-        cell.setCellImage(/* TODO */)
-        cell.product = productList[indexPath.row]
+        cell.setCellTitleText("Produit \(indexPath.row + 1)")
+        cell.product = productList[(indexPath.row + nbShake * 10)%productList.count]
+        cell.setCellImage()
         return cell
     }
     
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            self.nbShake += 1
+            collection.reloadData()
+        }
+    }
     
     
 

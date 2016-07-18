@@ -25,8 +25,14 @@ class StyleCollectionViewCell: UICollectionViewCell {
         cellTitle.text = text
     }
     
-    internal func setCellImage(/* TODO */) {
-        // TODO
+    internal func setCellImage() {
+        let url = NSURL(string : product!.urlImage);
+        
+        let data = NSData(contentsOfURL: url!)
+        
+        if data != nil {
+            cellImage.image = UIImage(data:data!)
+        }
     }
     
 }
