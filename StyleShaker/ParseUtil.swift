@@ -72,7 +72,7 @@ class ParseUtil {
         var connexionOk=false
         let task = session.dataTaskWithRequest(request) {
             (data, response, error) -> Void in
-            if (Network.isConnectedToNetwork()) {
+            if (NetworkReachability.isConnectedToNetwork()) {
                 let httpResponse = response as! NSHTTPURLResponse
                 let statusCode = httpResponse.statusCode
                 if (statusCode == 200) {

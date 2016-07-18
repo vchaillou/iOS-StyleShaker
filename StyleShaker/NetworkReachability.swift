@@ -8,7 +8,7 @@
 
 import SystemConfiguration
 
-public class Network {
+public class NetworkReachability {
     class func isConnectedToNetwork() -> Bool {
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
