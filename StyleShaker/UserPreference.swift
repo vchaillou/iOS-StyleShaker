@@ -8,9 +8,27 @@
 
 import UIKit
 
+// Les préférences sont accessibles depuis toute l'application
+// Si il faut ajouter une préférence, l'ajouter dans les tableaux
+
+// Tableau des préférences de Me
+let ME_PREFERENCES:Array<UserPreference> = [
+    UserPreference(sKey: "hair", sTitle: "Cheuveux", sLeftValue: "Clairs", sRightValue: "Foncés", sPersistenceTag: "USER_DATA_PREFERENCE_HAIR"),
+    UserPreference(sKey: "skin", sTitle: "Peau", sLeftValue: "Claire", sRightValue: "Foncée", sPersistenceTag: "USER_DATA_PREFERENCE_SKIN"),
+    UserPreference(sKey: "gender", sTitle: "Sexe", sLeftValue: "Male", sRightValue: "Femelle", sPersistenceTag: "USER_DATA_PREFERENCE_GENDER")]
+
+// Tableau des préférences du Mood
+let MOOD_PREFERENCES:Array<UserPreference> = [
+    UserPreference(sKey: "Work", sTitle: "Travail", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_WORK"),
+    UserPreference(sKey: "party", sTitle: "Soiree", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_NIGHT"),
+    UserPreference(sKey: "weekend", sTitle: "Weekend", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_WEEKEND"),
+    UserPreference(sKey: "chill", sTitle: "Chill", sLeftValue: "", sRightValue: "", sPersistenceTag: "USER_DATA_PREFERENCE_CHILL")]
+
 private let APPEND_RIGHT_SELECTED:String = "_RIGHT_SELECTED"
 private let APPEND_ENABLED:String = "_ENABLED"
 
+// Classe représentant une préférence Me ou Mood
+// Pour les préférences Mood, le booléen rightSelected est inutilisé
 class UserPreference {
     internal var key:String
     internal var title:String

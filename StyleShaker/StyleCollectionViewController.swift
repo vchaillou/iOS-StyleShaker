@@ -26,9 +26,6 @@ class StyleCollectionViewController: UIViewController, UICollectionViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
         collection.dataSource = self
         
         ParseUtil.parseJson(STYLE_URL, viewController: self)
@@ -44,11 +41,8 @@ class StyleCollectionViewController: UIViewController, UICollectionViewDataSourc
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Passage en argument du produit de la cellule sélectionnée
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-        
         if (segue.identifier == SEGUE_STYLE_TO_DETAIL) {
             let controller: DetailProductViewController = segue.destinationViewController as! DetailProductViewController
             let cell=sender as! StyleCollectionViewCell
@@ -58,10 +52,9 @@ class StyleCollectionViewController: UIViewController, UICollectionViewDataSourc
     }
     
 
-    // MARK: UICollectionViewDataSource
+    // MARK: - Collection View Data Source
 
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -80,48 +73,19 @@ class StyleCollectionViewController: UIViewController, UICollectionViewDataSourc
         return cell
     }
     
+    // MARK: - Shake
+    
+    // Activation des Shakes
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
     
+    // Traitement du shake une fois qu'il est terminé
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
             self.nbShake += 1
             collection.reloadData()
         }
     }
-    
-    
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-    
-    }
-    */
 
 }

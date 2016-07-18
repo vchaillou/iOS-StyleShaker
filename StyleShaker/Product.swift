@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+// Représentation d'un produit indépendante de la vue
 class Product:NSObject {
     
     

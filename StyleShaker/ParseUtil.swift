@@ -11,7 +11,7 @@ import UIKit
 class ParseUtil {
     
     
-    
+    // Crée le tableau des produits dans le viewController passé en paramètre en fonction des données du JSon passées en paramètres
     static func filterJson(data: NSData,viewController:StyleCollectionViewController) -> Void {
         var json:AnyObject? = nil
         
@@ -63,12 +63,12 @@ class ParseUtil {
     
     }
     
+    // Récupère le fichier JSon à partir de l'url
     static func parseJson(url:String, viewController:StyleCollectionViewController) -> Void {
         
         let requestUrl: NSURL = NSURL(string: url)!
         let request : NSMutableURLRequest = NSMutableURLRequest(URL: requestUrl)
         let session = NSURLSession.sharedSession()
-        //let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
         var connexionOk=false
         let task = session.dataTaskWithRequest(request) {
             (data, response, error) -> Void in
@@ -92,7 +92,7 @@ class ParseUtil {
             /**** Mode Hors ligne **/
             else {
                 
-                print("Abonne toi à la Freeebox Mgueul")
+                print("Pas de connexion")
                 let userDefaults = NSUserDefaults.standardUserDefaults()
                 
                 let dataOffline = userDefaults.objectForKey("products")! as! NSData
